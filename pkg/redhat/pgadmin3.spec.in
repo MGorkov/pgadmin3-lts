@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-, root, root)
-%doc BUGS CHANGELOG LICENSE README
+%doc BUGS CHANGELOG LICENSE README.md
 %{_bindir}/*
 %{_datadir}/%{name}
 %{_datadir}/applications/*
