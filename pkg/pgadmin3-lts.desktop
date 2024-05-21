@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=pgAdmin3 LTS
 Exec=/usr/bin/pgadmin3-lts
-Icon=/usr/share/pgadmin3-lts/pgAdmin3-lts.png
+Icon=/usr/share/pgadmin3-lts/pgadmin3-lts.png
 Type=Application
 Categories=Application;Development;
 MimeType=text/html

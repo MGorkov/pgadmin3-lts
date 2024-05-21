@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=1.23.1
+VERSION=1.23.2
 BUILDDIR=.build/rpm
 
 # Get build number
@@ -23,6 +23,11 @@ git archive --format=tar.gz --prefix=pgadmin3-lts-${VERSION}/ -o ${BUILDDIR}/SOU
 sed -e 's/\r$//' ./pgadmin3-lts.spec > $BUILDDIR/SPECS/pgadmin3-lts.spec
 
 rpmbuild -bb $BUILDDIR/SPECS/pgadmin3-lts.spec \
+ --define '_topdir '$(pwd)/$BUILDDIR \
+ --define 'version '$VERSION \
+ --define 'buildnumber '$BUILD_NUMBER
+
+debbuild -bb pgadmin3-lts.debian.spec \
  --define '_topdir '$(pwd)/$BUILDDIR \
  --define 'version '$VERSION \
  --define 'buildnumber '$BUILD_NUMBER
