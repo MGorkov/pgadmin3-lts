@@ -5,7 +5,7 @@ preserved the last remaining fork of the BigSQL fork of pgadmin3-lts.
 Although a limited amount of maintenance work has occurred, there is no
 active project leadership or commitments to maintain pgadmin-lts
 compatibility with future releases of PostgreSQL.  The master branch is functional
-with PostgreSQL 15.  YMMV.
+with PostgreSQL 16.  YMMV.
 
 Also, this GitHub repo will not vanish.
 
@@ -52,11 +52,11 @@ If you are too lazy to read [INSTALL](./INSTALL) instructions, then try this for
 ```
 # apt-get install libwxgtk3.0-dev wx3.0-headers wxgtk3.0 wx3.0
 
-# apt-get install libssh2-1 libssh2-1-dev libgcrypt20 libgcrypt20-dev libjson-perl libpq-dev #postgresql-15 postgresql-contrib-15 postgresql-client-15
+# apt-get install libssh2-1 libssh2-1-dev libgcrypt20 libgcrypt20-dev libjson-perl libpq-dev #postgresql-16 postgresql-contrib-16 postgresql-client-16
 # systemctl restart postgresql || true
 
 $ bash bootstrap
-$ ./configure --prefix=/opt/pgadmin3bigsql --with-libgcrypt --with-wx-version=3.0  CFLAGS=-fPIC CXXFLAGS=-fPIC #--with-pgsql=/usr/lib/postgresql/15 --without-sphinx-build
+$ ./configure --prefix=/opt/pgadmin3bigsql --with-libgcrypt --with-wx-version=3.0  CFLAGS=-fPIC CXXFLAGS=-fPIC #--with-pgsql=/usr/lib/postgresql/16 --without-sphinx-build
 $ make -j8
 $ sudo make install
 ```
@@ -65,10 +65,10 @@ for Centos/RedHat:
 ------------------------
 ```
 yum install wxGTK3 wxGTK3-devel
-yum install libssh2 libssh2-devel libxml2 libxml2-devel libxslt libxslt-devel openssl-devel #postgresql15 postgresql15-devel postgresql15-libs
+yum install libssh2 libssh2-devel libxml2 libxml2-devel libxslt libxslt-devel openssl-devel #postgresql16 postgresql16-devel postgresql16-libs
 
 $ bash bootstrap
-$ ./configure --prefix=/opt/pgadmin3bigsql --with-wx-version=3.0  CFLAGS=-fPIC CXXFLAGS=-fPIC --with-pgsql=/usr/pgsql-15 --without-sphinx-build
+$ ./configure --prefix=/opt/pgadmin3bigsql --with-wx-version=3.0  CFLAGS=-fPIC CXXFLAGS=-fPIC --with-pgsql=/usr/pgsql-16 --without-sphinx-build
 $ make -j8
 $ sudo make install
 ```
