@@ -54,7 +54,7 @@ for f in libpng15.so.15 libtiff.so.5 libtiffxx.so.5 libjbig.so.2.0 libwx_baseu-3
 mkdir -p $RPM_BUILD_ROOT/%{_datadir}/applications
 
 desktop-file-install --dir $RPM_BUILD_ROOT/%{_datadir}/applications --add-category Application --add-category Development ./pkg/%{name}.desktop
-
+cp ./pgexplain/pgexplain_format $RPM_BUILD_ROOT/%{_bindir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -61,6 +61,7 @@ desktop-file-install --dir $RPM_BUILD_ROOT/%{_datadir}/applications \
 	--add-category Development\
 	./pkg/%{name}.desktop
 
+cp ./pgexplain/pgexplain_format $RPM_BUILD_ROOT/%{_bindir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
