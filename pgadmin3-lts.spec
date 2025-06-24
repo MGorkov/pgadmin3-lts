@@ -45,7 +45,7 @@ which are in html format.
 
 %build
 bash bootstrap
-./configure --program-suffix=-lts --prefix=/usr --with-wx-version=3.0 CFLAGS=-fPIC CXXFLAGS=-fPIC --with-pgsql=/usr/pgsql-15 --without-sphinx-build
+./configure --program-suffix=-lts --prefix=/usr --with-wx-version=3.0 CFLAGS=-fPIC CXXFLAGS=-fPIC --with-pgsql=/usr/pgsql-17 --without-sphinx-build
 make %{?_smp_mflags} all
 
 %install

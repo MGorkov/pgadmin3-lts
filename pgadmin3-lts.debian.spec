@@ -47,7 +47,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 
 cp -f ./pkg/pgadmin3.png $RPM_BUILD_ROOT/%{_datadir}/%{name}/%{name}.png
 mkdir -p $RPM_BUILD_ROOT/%{_libdir}
-for f in libpng15.so.15 libtiff.so.5 libtiffxx.so.5 libjbig.so.2.0 libwx_baseu-3.0.so.0 libwx_baseu-3.0.so.0 libwx_baseu_net-3.0.so.0 libwx_baseu_net-3.0.so.0 libwx_baseu_xml-3.0.so.0 libwx_baseu_xml-3.0.so.0 libwx_gtk3u_adv-3.0.so.0 libwx_gtk3u_adv-3.0.so.0 libwx_gtk3u_aui-3.0.so.0 libwx_gtk3u_aui-3.0.so.0 libwx_gtk3u_core-3.0.so.0 libwx_gtk3u_core-3.0.so.0 libwx_gtk3u_html-3.0.so.0 libwx_gtk3u_html-3.0.so.0 libwx_gtk3u_stc-3.0.so.0 libwx_gtk3u_stc-3.0.so.0 libwx_gtk3u_xrc-3.0.so.0 libwx_gtk3u_xrc-3.0.so.0
+for f in libpng16.so.16 libtiff.so.5 libtiffxx.so.5 libjbig.so.2.1 libwx_baseu-3.0.so.0 libwx_baseu-3.0.so.0 libwx_baseu_net-3.0.so.0 libwx_baseu_net-3.0.so.0 libwx_baseu_xml-3.0.so.0 libwx_baseu_xml-3.0.so.0 libwx_gtk3u_adv-3.0.so.0 libwx_gtk3u_adv-3.0.so.0 libwx_gtk3u_aui-3.0.so.0 libwx_gtk3u_aui-3.0.so.0 libwx_gtk3u_core-3.0.so.0 libwx_gtk3u_core-3.0.so.0 libwx_gtk3u_html-3.0.so.0 libwx_gtk3u_html-3.0.so.0 libwx_gtk3u_stc-3.0.so.0 libwx_gtk3u_stc-3.0.so.0 libwx_gtk3u_xrc-3.0.so.0 libwx_gtk3u_xrc-3.0.so.0
 	do
 		cp /usr/lib64/$f $RPM_BUILD_ROOT/%{_libdir}/
 	done
